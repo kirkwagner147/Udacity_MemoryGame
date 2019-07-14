@@ -1,12 +1,12 @@
 /*
  * Create a list that holds all of your cards
  */
- const cardHolder = []
+ const cardTray = []
  //set up moves counter
  //loop through and get all card instances
  const theseCards = document.querySelectorAll('.card');
  for (const card of theseCards){
-   cardHolder.push(card);
+   cardTray.push(card);
  }
 
 /*
@@ -161,7 +161,7 @@ function creatCardsBoard() {
   movesCounter=0;
   matchCounter=0;
   start = Date.now();
-  const cards = shuffle(cardHolder);
+  const cards = shuffle(cardTray);
   //reset all cards
   for(const card of cards){
     card.classList.remove('open');
@@ -190,7 +190,7 @@ function creatCardsBoard() {
 
 
 //add event listeners to each card
-  for(const card of cardHolder){
+  for(const card of cardTray){
     // console.log(card);
     //update move_counter
     //add event listener to each card
@@ -220,3 +220,4 @@ function creatCardsBoard() {
 
 
 //adding comment to give me room to scroll
+
